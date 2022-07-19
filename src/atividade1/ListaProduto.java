@@ -1,14 +1,17 @@
 package src.atividade1;
 
 
-import java.util.Scanner;
-
-public class LstaProduto {
+public class ListaProduto {
 
         String nome;
         double preco;
 
-    public static void add(LstaProduto p1) {
+    public ListaProduto(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    public static void add(ListaProduto p1) {
     }
 
     public String getNome() {

@@ -2,29 +2,32 @@ package src.atividade1;
 
 import java.util.ArrayList;
 
+
 public class MainProduto {
 
     public static void main(String[] args) {
 
-    ArrayList<LstaProduto> ListaDeProdutos = new ArrayList<>();
+        ArrayList<ListaProduto> produtoComPreco = new ArrayList<>();
 
-    LstaProduto p1 = new LstaProduto();
-    LstaProduto p2 = new LstaProduto();
+        ListaProduto p1= new ListaProduto("café", 14.00);
+        ListaProduto p2= new ListaProduto("leite", 7.00);
+        ListaProduto p3= new ListaProduto("pao", 1.00);
 
-    p1.setNome("Cafe");
-    p1.setPreco(15);
+        produtoComPreco.add(p1);
+        produtoComPreco.add(p2);
+        produtoComPreco.add(p3);
 
-    p2.setNome("leite");
-    p2.setPreco(7);
 
-    LstaProduto.add(p1);
-    LstaProduto.add(p2);
 
-        System.out.println("Lista do mercado" );
-        System.out.println();
-        //for ( int mercado = 0; mercado < LstaProduto.size(); )
-        System.out.println( "Nome  " + p1.getNome() + "   Preço  " + p1.getPreco() );
-        System.out.println( "Nome  " + p2.getNome() + "  Preço  " + p2.getPreco() );
+        produtoComPreco.remove(p2);
+
+        for (ListaProduto i :produtoComPreco){
+            System.out.println("Nome do produto  "+ i.getNome()+ "  Preço  "+ i.getPreco());
+
+        }
+
+
+
 
 
     }
